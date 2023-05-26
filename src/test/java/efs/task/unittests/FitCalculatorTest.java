@@ -77,8 +77,8 @@ class FitCalculatorTest {
         assertFalse(pair);
     }
 
-    @ParameterizedTest(name = "Test {index}: height={0}, weight={1}")
-    @CsvFileSource(resources = "resources.data.csv")
+    @ParameterizedTest(name = "Test {index}: weight={0}, height={1}")
+    @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
     void shouldReturnFalse_forInvalidPair(double height, double weight){
         //given
 
